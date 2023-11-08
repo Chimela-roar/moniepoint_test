@@ -1,7 +1,7 @@
 import 'dart:math';
-
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:moniepoint_test/application/animation.dart';
 import 'package:moniepoint_test/application/theme.dart';
 import 'package:moniepoint_test/presentation/router/router.gr.dart';
@@ -16,6 +16,7 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
   late AnimationManager _animationManager;
+  DateTime? currentBackPressTime;
 
   @override
   void initState() {

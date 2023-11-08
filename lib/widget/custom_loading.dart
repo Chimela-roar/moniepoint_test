@@ -22,7 +22,9 @@ class _CustomLoadingState extends State<CustomLoading> {
   startSplashScreen() async {
     var duration = const Duration(seconds: 3);
     return Timer(duration, () {
-      context.router.push(const HomeIndex(children: [Home()]));
+      context.router.replaceAll([
+        const HomeIndex(children: [Home()])
+      ]);
     });
   }
 

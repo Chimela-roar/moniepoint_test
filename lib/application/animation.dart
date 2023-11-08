@@ -44,7 +44,7 @@ class AnimationManager {
 
   void forward() {
     _controller.forward();
-    Future.delayed(const Duration(seconds: 1), () {
+    Future.delayed(const Duration(milliseconds: 500), () {
       _controller1.forward();
     });
   }
