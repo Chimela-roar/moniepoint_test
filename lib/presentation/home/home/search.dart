@@ -2,7 +2,6 @@ import 'dart:math';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint_test/application/animation.dart';
 import 'package:moniepoint_test/application/theme.dart';
 import 'package:moniepoint_test/application/utils.dart';
@@ -21,7 +20,6 @@ class _SearchState extends State<Search> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    // emptySearch = searchList;
     super.initState();
     _animationManager = AnimationManager(this);
   }

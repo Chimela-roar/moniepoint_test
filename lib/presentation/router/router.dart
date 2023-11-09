@@ -6,7 +6,6 @@ import 'package:moniepoint_test/presentation/router/router.gr.dart';
 class AppRouter extends $AppRouter {
   @override
   List<AutoRoute> get routes => [
-        // AutoRoute(page: CustomLoading.page, initial: true),
         AutoRoute(page: Search.page),
         CustomRoute(
           page: Calculate.page,
@@ -41,9 +40,19 @@ class AppRouter extends $AppRouter {
               AutoRoute(page: PendingShipment.page),
             ]),
         AutoRoute(page: CustomSuccess.page),
-        AutoRoute(
+        CustomRoute(
           path: "/",
           page: HomeIndex.page,
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            const begin = 0.0;
+            const end = 1.0;
+            var tween = Tween(begin: begin, end: end);
+            var fadeAnimation = animation.drive(tween);
+            return FadeTransition(
+              opacity: fadeAnimation,
+              child: child,
+            );
+          },
           children: [
             AutoRoute(page: Home.page, initial: true),
             AutoRoute(page: DummyCalculate.page),

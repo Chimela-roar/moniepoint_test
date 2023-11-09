@@ -20,7 +20,8 @@ class MyApp extends StatelessWidget {
       title: 'Moniepoint Test',
       theme: ThemeData(
           scaffoldBackgroundColor: const Color(0xFFFBFAFB),
-          textTheme: GoogleFonts.dmSansTextTheme((Theme.of(context).textTheme)),
+          textTheme:
+              GoogleFonts.archivoTextTheme((Theme.of(context).textTheme)),
           colorScheme: ColorScheme.fromSeed(
               seedColor: primaryColor, background: const Color(0xFFF9F9F9)),
           useMaterial3: true,

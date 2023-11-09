@@ -253,7 +253,7 @@ class _CalculateState extends State<Calculate> with TickerProviderStateMixin {
                 CustomFilledButton(
                     text: "Calculate",
                     onTap: () {
-                      context.router.push(const CustomSuccess());
+                      context.router.popAndPush(const CustomSuccess());
                     },
                     disabled: false)
               ],

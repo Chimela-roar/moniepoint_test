@@ -51,7 +51,7 @@ class Home extends StatelessWidget {
                               children: [
                                 Text('Wertheimer, Illinois',
                                     style: TextStyle(
-                                        fontSize: 16, color: Colors.white)),
+                                        fontSize: 17, color: Colors.white)),
                                 SizedBox(width: 5),
                                 Icon(Icons.keyboard_arrow_down_sharp,
                                     size: 15, color: Colors.white)
@@ -116,7 +116,7 @@ class Home extends StatelessWidget {
                 ),
               ]),
         ).animate().slide(
-              duration: const Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 500),
               begin: const Offset(0, -1),
               end: const Offset(0, 0),
             ),
@@ -158,7 +158,7 @@ class Home extends StatelessWidget {
                                     maxLines: 1,
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
-                                        fontSize: 16,
+                                        fontSize: 17,
                                         fontWeight: FontWeight.w700),
                                   ),
                                 )
@@ -203,7 +203,7 @@ class Home extends StatelessWidget {
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
                                             letterSpacing: 0.1,
-                                            fontSize: 15,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.w500),
                                       ),
                                     )
@@ -242,7 +242,7 @@ class Home extends StatelessWidget {
                                           overflow: TextOverflow.ellipsis,
                                           style: TextStyle(
                                               letterSpacing: 0.1,
-                                              fontSize: 15,
+                                              fontSize: 16,
                                               fontWeight: FontWeight.w500),
                                         ),
                                       ],
@@ -285,7 +285,7 @@ class Home extends StatelessWidget {
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
                                             letterSpacing: 0.1,
-                                            fontSize: 15,
+                                            fontSize: 16,
                                             fontWeight: FontWeight.w500),
                                       ),
                                     )
@@ -313,7 +313,7 @@ class Home extends StatelessWidget {
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           letterSpacing: 0.1,
-                                          fontSize: 15,
+                                          fontSize: 16,
                                           fontWeight: FontWeight.w500),
                                     ),
                                   )
@@ -349,7 +349,7 @@ class Home extends StatelessWidget {
                   const Text("Available vehicles", style: titleText),
                   const SizedBox(height: 15),
                   SizedBox(
-                      height: 215,
+                      height: 220,
                       child: ListView(
                         shrinkWrap: true,
                         scrollDirection: Axis.horizontal,
@@ -401,7 +401,7 @@ class Vehicles extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(15),
-      width: 150,
+      width: 160,
       decoration: BoxDecoration(
           color: Colors.white, borderRadius: BorderRadius.circular(10)),
       child: Stack(
@@ -424,10 +424,10 @@ class Vehicles extends StatelessWidget {
                 "assets/images/$image.png",
               )
                   .animate(
-                      delay: 1000.ms,
+                      delay: 600.ms,
                       onPlay: (controller) => controller.forward())
                   .slide(
-                    duration: const Duration(milliseconds: 400),
+                    duration: const Duration(milliseconds: 500),
                     begin: const Offset(1, 0),
                     end: const Offset(0, 0),
                   )),

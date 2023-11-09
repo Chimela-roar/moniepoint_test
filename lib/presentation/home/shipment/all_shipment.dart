@@ -53,8 +53,8 @@ class AllShipment extends StatelessWidget {
                                       Container(
                                         padding: const EdgeInsets.symmetric(
                                             horizontal: 10),
-                                        width: 115,
-                                        height: 21,
+                                        width: 110,
+                                        height: 20,
                                         decoration: BoxDecoration(
                                             color: const Color.fromARGB(
                                                 62, 156, 224, 158),
@@ -88,12 +88,14 @@ class AllShipment extends StatelessWidget {
                                           fontWeight: FontWeight.bold,
                                         ),
                                       ),
-                                      const SizedBox(height: 7),
+                                      const SizedBox(height: 8),
                                       const Text(
                                         "Your delivery, #NHD4723985285 from Canada is arriving today",
                                         overflow: TextOverflow.ellipsis,
                                         maxLines: 2,
                                         style: TextStyle(
+                                            letterSpacing: 0.3,
+                                            height: 1.2,
                                             color: Color.fromARGB(
                                                 169, 56, 56, 56)),
                                       ),
@@ -128,7 +130,7 @@ class AllShipment extends StatelessWidget {
                               Expanded(
                                 child: Image.asset(
                                   "assets/images/bigbox.png",
-                                  scale: 2,
+                                  scale: 5,
                                 ),
                               )
                             ],
