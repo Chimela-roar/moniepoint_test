@@ -8,4 +8,4 @@ const lightOrange = Color(0xFFFDE2D0);
 const lightGreen = Color(0xFFCFEDDA);
 
 const titleText =
-    TextStyle(fontSize: 18, fontWeight: FontWeight.w600, letterSpacing: 0.5);
+    TextStyle(fontSize: 19, fontWeight: FontWeight.bold, letterSpacing: 0.5);

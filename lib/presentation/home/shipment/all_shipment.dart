@@ -127,8 +127,8 @@ class AllShipment extends StatelessWidget {
                               ),
                               Expanded(
                                 child: Image.asset(
-                                  "assets/images/receive.png",
-                                  scale: 10,
+                                  "assets/images/bigbox.png",
+                                  scale: 2,
                                 ),
                               )
                             ],

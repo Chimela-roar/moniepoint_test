@@ -14,7 +14,7 @@ class AnimationManager {
     );
     _controller1 = AnimationController(
       vsync: vsync,
-      duration: const Duration(milliseconds: 1000),
+      duration: const Duration(milliseconds: 700),
     );
 
     slideAnimation = Tween<Offset>(
@@ -44,9 +44,14 @@ class AnimationManager {
 
   void forward() {
     _controller.forward();
+
     Future.delayed(const Duration(milliseconds: 500), () {
       _controller1.forward();
     });
+  }
+
+  void reset() {
+    _controller.reset();
   }
 
   void dispose() {

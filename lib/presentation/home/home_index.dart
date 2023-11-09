@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:moniepoint_test/application/theme.dart';
 import 'package:moniepoint_test/presentation/router/router.gr.dart';
 import 'package:moniepoint_test/widget/custom_tab_indicator.dart';
@@ -39,24 +38,16 @@ class _HomeIndexState extends State<HomeIndex> {
 
                 type: BottomNavigationBarType.fixed,
                 onTap: (value) {
-                  // value == 1
-                  //     ? tabsRouter.setActiveIndex(value)
-                  //      context.router.push(const Calculate());
-                  //     : value == 2
-                  //         ? context.router.push(const Shipment())
-                  //         : tabsRouter.setActiveIndex(value);
-                  // currentPageIndex = value;
-
                   if (value == 1) {
-                    tabsRouter.setActiveIndex(value);
                     currentPageIndex = value;
+                    tabsRouter.setActiveIndex(value, notify: false);
                     context.router.popAndPush(const Calculate());
                   } else if (value == 2) {
-                    tabsRouter.setActiveIndex(value);
+                    tabsRouter.setActiveIndex(value, notify: false);
                     currentPageIndex = value;
                     context.router.popAndPush(const Shipment());
                   } else {
-                    tabsRouter.setActiveIndex(value);
+                    tabsRouter.setActiveIndex(value, notify: false);
                     currentPageIndex = value;
                   }
                 },

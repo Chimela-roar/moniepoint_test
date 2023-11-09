@@ -19,17 +19,19 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Moniepoint Test',
       theme: ThemeData(
-          textTheme: GoogleFonts.latoTextTheme((Theme.of(context).textTheme)),
+          scaffoldBackgroundColor: const Color(0xFFFBFAFB),
+          textTheme: GoogleFonts.dmSansTextTheme((Theme.of(context).textTheme)),
           colorScheme: ColorScheme.fromSeed(
               seedColor: primaryColor, background: const Color(0xFFF9F9F9)),
           useMaterial3: true,
           appBarTheme: const AppBarTheme(
+              toolbarHeight: 70,
               backgroundColor: primaryColor,
               titleTextStyle: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
                   letterSpacing: 0.3,
-                  fontWeight: FontWeight.w500))),
+                  fontWeight: FontWeight.normal))),
       routerConfig: appRouter.config(),
       builder: (context, child) => ResponsiveWrapper.builder(
         child,

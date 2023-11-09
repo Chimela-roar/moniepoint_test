@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:countup/countup.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:moniepoint_test/application/theme.dart';
 import 'package:moniepoint_test/presentation/router/router.gr.dart';
 import 'package:moniepoint_test/widget/custom_filled_button.dart';
@@ -62,6 +63,13 @@ class _CustomSuccessState extends State<CustomSuccess>
           children: [
             Column(
               children: [
+                SizedBox(
+                    width: 250,
+                    child: Image.asset(
+                      "assets/images/movemate.png",
+                      scale: 1,
+                    ).animate().fadeIn()),
+                const SizedBox(height: 15),
                 AnimatedBuilder(
                   animation: _controller,
                   builder: (context, child) {
@@ -69,17 +77,12 @@ class _CustomSuccessState extends State<CustomSuccess>
                       scale:
                           isAnimationCompleted ? finalScale : _animation.value,
                       child: Image.asset(
-                        "assets/images/receive.png",
-                        scale: 5,
+                        "assets/images/bigbox.png",
+                        scale: 2.5,
                       ),
                     );
                   },
                 ),
-
-                // Image.asset(
-                //   "assets/images/receive.png",
-                //   scale: 5,
-                // ),
                 const SizedBox(height: 45),
                 const Text(
                   "Total Estimated Amount",

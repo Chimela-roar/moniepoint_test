@@ -17,6 +17,7 @@ class CustomTextfield extends StatelessWidget {
         style: const TextStyle(fontSize: 20),
         cursorHeight: 18,
         decoration: InputDecoration(
+          hintStyle: const TextStyle(fontSize: 19),
           hintText: hintText,
           border: InputBorder.none,
           contentPadding:

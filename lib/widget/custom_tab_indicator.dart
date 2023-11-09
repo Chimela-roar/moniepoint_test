@@ -32,8 +32,10 @@ class TabIndicators extends StatelessWidget {
       elements.add(Expanded(
           child: Padding(
         padding: EdgeInsets.symmetric(horizontal: _padding),
-        child:
-            Container(color: i == _activeIdx ? _activeColor : _inactiveColor),
+        child: AnimatedContainer(
+          color: i == _activeIdx ? _activeColor : _inactiveColor,
+          duration: const Duration(milliseconds: 500),
+        ),
       )));
     }
 
